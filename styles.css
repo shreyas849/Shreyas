@@ -4,15 +4,24 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f5f7fa;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #004080;
+  background: linear-gradient(to right, #004080, #0073e6);
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 50px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  background-color: #003366;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -20,65 +29,89 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background-color: #003366;
+  gap: 25px;
   margin: 0;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 10px;
-  transition: background-color 0.3s;
+  padding: 12px 18px;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s ease;
 }
 
 nav ul li a:hover {
   background-color: #002244;
-  border-radius: 5px;
+  transform: scale(1.05);
 }
 
 .hero {
-  padding: 30px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 main {
-  padding: 20px;
-  max-width: 900px;
+  padding: 30px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 h2 {
   border-bottom: 2px solid #004080;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
+  font-size: 1.8em;
+  color: #004080;
+  margin-bottom: 15px;
 }
 
 .card {
   background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card ul {
-  padding-left: 20px;
+  padding-left: 25px;
+  list-style: disc;
 }
 
 footer {
   background-color: #004080;
   color: white;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.9em;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  main {
+    padding: 20px;
   }
 }
